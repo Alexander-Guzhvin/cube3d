@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>T</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			
+			body 
+			{ 
+				background: linear-gradient(to left top, blue, red) fixed;
+			}
+			
+			#output
+			{
+				display:inline;
+				color:white;
+			}
+			
+			#wrapper
+			{
+				position:absolute;
+				top:40px;
+				left:0;
+				right:0;
+				bottom:0;
+				margin:0;
+				padding:0;
+			}
+			
+		</style>	
+		<script src="js/three.min.js"></script>
+		<script src="js/orbitcontrols.min.js"></script>
+		<script src="js/qubismenu.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<h1 id="output"></h1>
+			
+		</div>
+		<div id="wrapper"></div>
+		<script>
+			
+			var timerId;
+			var output = document.getElementById( "output" );
+			var wrapper = document.getElementById( "wrapper" );
+			
+			var app = new QubisMenu( wrapper );
+				app.onSelect = function( name )
+				{
+					output.innerHTML = name;
+					
+					clearTimeout( timerId );
+					timerId = setTimeout( clearOutput, 2000 );
+					
+					console.log( "click -> " + name );
+				}
+				
+			
+			
+			function clearOutput()
+			{
+				output.innerHTML = "";
+			}
+
+		</script>
+		
+		
+	</body>
+</html>
