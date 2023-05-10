@@ -1,70 +1,411 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-		<title>T</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			
-			body 
-			{ 
-				background: linear-gradient(to left top, blue, red) fixed;
-			}
-			
-			#output
-			{
-				display:inline;
-				color:white;
-			}
-			
-			#wrapper
-			{
-				position:absolute;
-				top:40px;
-				left:0;
-				right:0;
-				bottom:0;
-				margin:0;
-				padding:0;
-			}
-			
-		</style>	
-		<script src="js/three.min.js"></script>
-		<script src="js/orbitcontrols.min.js"></script>
-		<script src="js/qubismenu.min.js"></script>
-	</head>
-	<body>
-		<div>
-			<h1 id="output"></h1>
-			
-		</div>
-		<div id="wrapper"></div>
-		<script>
-			
-			var timerId;
-			var output = document.getElementById( "output" );
-			var wrapper = document.getElementById( "wrapper" );
-			
-			var app = new QubisMenu( wrapper );
-				app.onSelect = function( name )
-				{
-					output.innerHTML = name;
-					
-					clearTimeout( timerId );
-					timerId = setTimeout( clearOutput, 2000 );
-					
-					console.log( "click -> " + name );
-				}
-				
-			
-			
-			function clearOutput()
-			{
-				output.innerHTML = "";
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900;1000&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/three.min.js"></script>
+    <script src="js/orbitcontrols.min.js"></script>
+    <script src="js/qubismenu.min.js"></script>
+</head>
 
-		</script>
-		
-		
-	</body>
+
+<body>
+    <header class=" header">
+        <div class="header__container _container">
+            <div class="header__content">
+                <div class="header__logo"><img src="img/Logo.png" alt=""></div>
+                <div class="header__menu">
+                    <div type="button" class="menu__icon icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list" id="top-menu">
+                            <li class="menu__item"><a  href="#1" class="menu__link" data-goto=".page__section-1"> home</a></li>
+                            <li class="menu__item"><a  href="#2" class="menu__link" data-goto=".page__section-2">about</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-3" href="#3" class="menu__link">roadmape</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-4"href="#4" class="menu__link">team</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-5" href="#5" class="menu__link">white papper</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__info info">
+                    <form action="">
+                        <div class="info__button">Начать проект</div>
+                    </form>
+                    <div class="info__number">8 800 260-08-50</div>
+                    <div class="info__link"><a href="" class="">Заказать обратный звонок</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="home">
+
+        <div class="home__content">
+            <div>
+                <h1 id="output"></h1>
+                
+            </div>
+            <div id="wrapper"></div>
+        </div>
+    </div>
+    <div class="solutions" id="1">
+        <div class="solutions__container _container">
+            <div class="solutions__title _title">Решения</div>
+            <div class="solutions__content">
+                <div class="solutions__class calss-tab">
+                    <div class="calss-tab__block tabs__content">
+                        <div class="calss-tab__body class-body tabs__item" id="tab_1">
+                            <div class="class-body__img"><img src="img/solutions-1.png" alt=""></div>
+                        </div>
+            
+                        <div class="calss-tab__body class-body tabs__item" id="tab_2">
+                            <div class="class-body__img"><img src="img/solutions-2.png" alt=""></div>
+                        </div>
+            
+                        <div class=" calss-tab__body class-body tabs__item" id="tab_3">
+                            <div class="class-body__img"><img src="img/solutions-3.png" alt=""></div>
+                        </div>
+                        <div class="calss-tab__body class-body tabs__item" id="tab_4">
+                            <div class="class-body__img"><img src="img/solutions-4.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="calss-tab__flex">
+                    <div class="calss-tab__nav ">
+                        <div href="#" class="calss-tab__item-1 tabs__nav-btn" type="button" data-tab="#tab_1">
+                            <div class="calss-tab__bg-1 calss-tab__bg tab">
+                                <div class="tab__body">
+                                    <div class="tab__title">Электронная коммерция</div>
+                                    <ul class="tab__list">
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="calss-tab__item-2 tabs__nav-btn" type="button" data-tab="#tab_2">
+                            <div class="calss-tab__bg-2 calss-tab__bg tab">
+                                <div class="tab__body">
+                                    <div class="tab__title">Электронная коммерция</div>
+                                    <ul class="tab__list">
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="calss-tab__item-3 tabs__nav-btn" type="button" data-tab="#tab_3">
+                            <div class="calss-tab__bg-3 calss-tab__bg tab">
+                                <div class="tab__body">
+                                    <div class="tab__title">Электронная коммерция</div>
+                                    <ul class="tab__list">
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="calss-tab__item-4 tabs__nav-btn" type="button" data-tab="#tab_4">
+                            <div class="calss-tab__bg-4 calss-tab__bg tab">
+                                <div class="tab__body">
+                                    <div class="tab__title">Электронная коммерция</div>
+                                    <ul class="tab__list">
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                        <li class="tab__item">B2C/B2B электронные торговые площадки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="question"  id="2">
+        <div class="question__container _container">
+        <div class="question__title _title">принципы</div>
+        <div class="tabs2">
+            
+            <div class="question__content tabs__content">
+            <section id="accordion" class="accordion">
+            <div class="question__tab tab">                
+                
+                <div class="accordion-item ">
+                  <div class="accordion-item-header">
+                    Современные коммуникационные решения
+                  </div>
+                  <div class="plus-item-header"></div>
+                  <div class="accordion-item-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit pariatur nesciunt modi dicta, itaque eaque sint doloribus
+                    dignissimos consequatur rem id animi sed quibusdam voluptatem inventore aperiam ut excepturi fuga.
+                  </div>
+                </div>
+            
+                <div class="accordion-item">
+                  <div class="accordion-item-header">
+                    Современные коммуникационные решения
+                  </div>
+                  <div class="accordion-item-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptas, corrupti repudiandae ea earum, aspernatur,
+                    dolores repellat odit sed minus enim dolore sint quaerat aliquam alias iusto illum ipsa rem?
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        Современные коммуникационные решения
+                    </div>
+                    <div class="accordion-item-content">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptas, corrupti repudiandae ea earum, aspernatur,
+                      dolores repellat odit sed minus enim dolore sint quaerat aliquam alias iusto illum ipsa rem?
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+            </div>   
+        <div class="question__img"><img src="img/question.png" alt=""></div> 
+
+    </div>
+    </div>
+    </div>
+    <div class="fact"  id="3">
+        <div class="fact__container _container">
+            <div class="fact__title _title">факты</div>
+            <div class="fact__content">
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+                <div class="fact__group">
+                    <div class="fact__img"><img src="img/fact-1.png" alt=""></div>
+                    <div class="fact__subtext">#1</div>
+                    <div class="fact__text">в рейтинге веб-интеграторов</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="industry"  id="4">
+        <div class="industry__container _container">
+            <div class="industry__title _title">Индустрия</div>
+            <div class="industry__content">
+                <div class="industry__left left-indu">
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-1.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-2.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-3.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-4.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-5.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-6.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-7.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                    <div class="left-indu__body">
+                        <div class="left-indu__img"><img src="img/left-indu-8.png" alt=""></div>
+                        <div class="left-indu__text">банк</div>
+                    </div>
+                </div>
+                <div class="industry__right right-indu">
+
+                        <div class="right-indu__img"><img src="img/right-indu.png" alt=""></div>
+                        <div class="right-indu__body">
+                            <ul class="right-indu__list">
+                                <li class="right-indu__item">Онлайн-банкинг</li>
+                                <li class="right-indu__item">Онлайн-банкинг</li>
+                                <li class="right-indu__item">Онлайн-банкинг</li>
+                                <li class="right-indu__item">Онлайн-банкинг</li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clients"  id="5">
+        <div class="clients__container _container">
+            <div class="clients__title _title">клиенты</div>
+                <div class="clients__content">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="clients__group">
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                                <div class="clients__item"><img src="img/clients-1.png" alt=""></div>
+                            </div>
+                          </div>
+
+                
+                        </div>
+                        <div class="swiper-pagination">
+                          </div>
+                      </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+			
+        var timerId;
+        var output = document.getElementById( "output" );
+        var wrapper = document.getElementById( "wrapper" );
+        
+        var app = new QubisMenu( wrapper );
+            app.onSelect = function( name )
+            {
+                output.innerHTML = name;
+                
+                clearTimeout( timerId );
+                timerId = setTimeout( clearOutput, 2000 );
+                
+                console.log( "click -> " + name );
+            }
+            
+        
+        
+        function clearOutput()
+        {
+            output.innerHTML = "";
+        }
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
