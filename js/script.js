@@ -73,7 +73,7 @@ tabsBtn.forEach(onTabClick);
 
 
 function onTabClick(item) {
-  item.addEventListener("click", function() {
+  item.addEventListener("mouseover", function() {
       let currentBtn = item;
       let tabId = currentBtn.getAttribute("data-tab");
       let currentTab = document.querySelector(tabId);
