@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900;1000&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/three.min.js"></script>
-    <script src="js/orbitcontrols.min.js"></script>
-    <script src="js/qubismenu.min.js"></script>
 </head>
 
 
@@ -29,11 +27,11 @@
                     </div>
                     <nav class="menu__body">
                         <ul class="menu__list" id="top-menu">
-                            <li class="menu__item"><a  href="#1" class="menu__link" data-goto=".page__section-1"> home</a></li>
-                            <li class="menu__item"><a  href="#2" class="menu__link" data-goto=".page__section-2">about</a></li>
-                            <li class="menu__item"><a data-goto=".page__section-3" href="#3" class="menu__link">roadmape</a></li>
-                            <li class="menu__item"><a data-goto=".page__section-4"href="#4" class="menu__link">team</a></li>
-                            <li class="menu__item"><a data-goto=".page__section-5" href="#5" class="menu__link">white papper</a></li>
+                            <li class="menu__item"><a  href="#1" class="menu__link" data-goto=".page__section-1">Принципы</a></li>
+                            <li class="menu__item"><a  href="#2" class="menu__link" data-goto=".page__section-2">Факты</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-3" href="#3" class="menu__link">Отрасли</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-4"href="#4" class="menu__link">Клиенты</a></li>
+                            <li class="menu__item"><a data-goto=".page__section-5" href="#5" class="menu__link">Технологии</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,13 +56,13 @@
 
         </div>
     </div>
-    <div class="solutions" id="1">
+    <div class="solutions" >
         <div class="solutions__container _container">
             <div class="solutions__title _title">Решения</div>
             <div class="solutions__content">
                 <div class="solutions__class calss-tab">
                     <div class="calss-tab__block tabs__content">
-                        <div class="calss-tab__body class-body tabs__item" id="tab_1">
+                        <div class="calss-tab__body class-body tabs__item active" id="tab_1">
                             <div class="class-body__img"><img src="img/solutions-1.png" alt=""></div>
                         </div>
             
@@ -81,7 +79,7 @@
                     </div>
                     <div class="calss-tab__flex">
                     <div class="calss-tab__nav ">
-                        <div href="#" class="calss-tab__item-1 tabs__nav-btn" type="button" data-tab="#tab_1">
+                        <div href="#" class="calss-tab__item-1 tabs__nav-btn active" type="button" data-tab="#tab_1">
                             <div class="calss-tab__bg-1 calss-tab__bg tab">
                                 <div class="tab__body">
                                     <div class="tab__title">Электронная коммерция</div>
@@ -139,7 +137,7 @@
             </div>
         </div>
     </div>
-    <div class="question"  id="2">
+    <div class="question page__section-1"  id="1">
         <div class="question__container _container">
         <div class="question__title _title">принципы</div>
         <div class="tabs2">
@@ -187,7 +185,7 @@
     </div>
     </div>
     </div>
-    <div class="fact"  id="3">
+    <div class="fact page__section-2"  id="2">
         <div class="fact__container _container">
             <div class="fact__title _title">факты</div>
             <div class="fact__content">
@@ -254,7 +252,7 @@
             </div>
         </div>
     </div>
-    <div class="industry"  id="4">
+    <div class="industry page__section-3"  id="3">
         <div class="industry__container _container">
             <div class="industry__title _title">ОТрасли</div>
             <div class="industry__content">
@@ -308,7 +306,7 @@
             </div>
         </div>
     </div>
-    <div class="clients"  id="5">
+    <div class="clients page__section-4"  id="4">
         <div class="clients__container _container">
             <div class="clients__title _title">клиенты</div>
                 <div class="clients__content">
@@ -377,36 +375,159 @@
             </div>
         </div>
     </div>
+    <div class="technology page__section-5" id="5">
+      <div class="technology__container _container">
+        <div class="technology__title _title">технологии</div>
+        <div class="technology__content">
+          <ul class="technology__list">
+            <li>УПРАВЛЕНИЕ ПРОЕКТАМИ</li>
+            <li>РАЗРАБОТКА СЕРВЕРНЫХ СИСТЕМ</li>
+            <li>РАЗРАБОТКА КЛИЕНТСКИХ СИСТЕМ</li>
+            <li>МОБИЛЬНАЯ РАЗРАБОТКА</li>
+            <li>РАЗРАБОТКА БАЗ ДАННЫХ</li>
+            <li>КОРПОРАТИВНЫЙ ПОИСК</li>
+            <li>BIG DATA</li>
+            <li>ИНТЕГРАЦИЯ</li>
+            <li>УПРАВЛЕНИЕ КОДОМ</li>
+            <li>ПРОЕКТИРОВАНИЕ</li>
+            <li>DEVOPS</li>
+            <li>QA</li>
+            <li>ВЕБ-АНАЛИТИКА</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz">
+    <div class="quiz__container _container">
+    <div class="quiz__content">
+        <div class="wrapper">
+        <ul class="steps">
+            <li class="is-active">01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+        </ul>
 
 
-    <script>
-			
-        var timerId;
-        var output = document.getElementById( "output" );
-        var wrapper = document.getElementById( "wrapper" );
-        
-        var app = new QubisMenu( wrapper );
-            app.onSelect = function( name )
-            {
-                output.innerHTML = name;
-                
-                clearTimeout( timerId );
-                timerId = setTimeout( clearOutput, 2000 );
-                
-                console.log( "click -> " + name );
-            }
+        <form class="form-wrapper" enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="send.php">
+            <fieldset class="section is-active" >
+            <h3>Выберите тип <br>
+                Вашего проекта</h3>
+                <label class="radio" style="display: flex; justify-content: space-between;" >
+                <input type="radio"  id="type-1" name="type" value="HTML" checked>
+                <label for="type-1" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция1</label>
+                <input type="radio" id="type-2" name="type" value="CSS">
+                <label for="type-2" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция2</label>
+                <input type="radio" id="type-3" name="type" value="JavaScript">
+                <label for="type-3" class="label__img" style="display: flex; flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция3</label>
+                <input type="radio" id="type-4" name="type" value="JavaScript">
+                <label for="type-4" class="label__img" style="display: flex; flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция3</label>
+                <input type="radio" id="type-5" name="type" value="JavaScript">
+                <label for="type-5" class="label__img" style="display: flex; flex-direction: column;" ><img src="img/quiz-1.png" >коммерция3</label>
+                </label>
+            <div class="button quiz__next">Далее</div>
+            </fieldset>
+            <fieldset class="section" >
+                <h3>Выберите<br> Платформу</h3>
+                    <label class="radio" style="display: flex; column-gap: 20px;" >
+                    <input type="radio"  id="platform-1" name="platform" value="HTML" checked>
+                    <label for="platform-1" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция1</label>
+                    <input type="radio" id="platform-2" name="platform" value="CSS">
+                    <label for="platform-2" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция2</label>
+                    </label>
+                <div class="button quiz__next">Далее</div>
+                </fieldset>
+                <fieldset class="section" >
+                    <h3>В каком состоянии<br>
+                        Ваш проект?</h3>
+                        <label class="radio" style="display: flex; column-gap: 20px;" >
+                        <input type="radio"  id="project-1" name="project" value="HTML" checked>
+                        <label for="project-1" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция1</label>
+                        <input type="radio" id="project-2" name="project" value="CSS">
+                        <label for="project-2" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция2</label>
+                        </label>
+                    <div class="button quiz__next">Далее</div>
+                    </fieldset>
+                    <fieldset class="section" >
+                        <h3>Как быстро<br>
+                            Начать работу?</h3>
+                        <label class="radio" style="display: flex; column-gap: 20px;" >
+                            <input type="radio"  id="time-1" name="time" value="HTML" checked>
+                            <label for="time-1" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция1</label>
+                            <input type="radio" id="time-2" name="time" value="CSS">
+                            <label for="time-2" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция2</label>
+                            
+                            <input type="radio" id="time-3" name="time" value="CSS">
+                            <label for="time-3" class="label__img" style="display: flex;flex-direction: column;" ><img src="img/quiz-1.png" alt="">коммерция2</label>
+                        </label>
+                        <div class="button quiz__next">Далее</div>
+                        </fieldset>
+            <fieldset class="section" >
+            <h3>Оставьте<br>
+                Ваши контакты</h3>
+                <label style="display: flex; justify-content: space-between;">
+                <input type="text" class="quiz-input quiz-input__name" style="border-bottom: 1px  #8894AD solid;" placeholder="имя">
+                <input type="text" class="quiz-input quiz-input__tel" style="border-bottom: 1px  #8894AD solid;" placeholder="имя">
+                <input type="text" class="quiz-input quiz-input__email" style="border-bottom: 1px  #8894AD solid;" placeholder="имя">
+                </label>
+                <input type="textarea" class="quiz-input__text" style="border-bottom: 1px  #8894AD solid;" placeholder="имя">
+                <p><input class="quiz__button" value="Начать проект" type="submit"></p>
+            </fieldset>
             
-        
-        
-        function clearOutput()
-        {
-            output.innerHTML = "";
-        }
+        </form>
+        </div>
+        <div class="quiz__block">
+        <div class="quiz__subtitle">Ваш проект</div>
+        <ul class="steps-2">
+            <li class="is-active">Тип</li>
+            <li>Платформа</li>
+            <li>Состояние</li>
+            <li>Старт</li>
+            <li>Контакты</li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="contact">
+        <div class="contact__container _container">
+            <div class="contact__title _title">Обратная связь</div>
+            <div class="contact__content">
+                <form class="contact__form"  enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="send.php">
+                    <input type="text" class="contact__input">
+                    <input type="text" class="contact__input">
+                    <p><button type="sumbit" class="contact__button">Отправить</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"> </script>
+
+
+<footer class="footer">
+    <div class="footer__container _container">
+        <div class="footer__content">
+            <div class="footer__data">© 1997-2023 QUBIS</div>
+            <div class="footer__links">
+                <a href="/">Пользовательское соглашения</a>
+                <a href="/">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__info">
+                <a href="/">inbox@qubis.ru</a>
+                <a href="/">+7 (495) 260-08-50</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
