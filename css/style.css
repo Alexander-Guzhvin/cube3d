@@ -1483,6 +1483,10 @@ margin-top: 16px;
 }
 
 
+@media screen and (min-width: 1920px){
+	._container{width:1300px}
+}
+
 
 
 
