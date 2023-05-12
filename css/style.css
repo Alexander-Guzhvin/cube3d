@@ -1457,6 +1457,30 @@ margin-top: 16px;
 
 
 
+@media (min-width: 1921px) {
+.class-body__img img{
+    height: 460px
+}
+.calss-tab__body {
+    top: 250px;
+ }
+}
+
+@media (max-width: 1400px) {
+.class-body__img img{
+    height: 570px
+}
+.calss-tab__body {
+    top: 250px;
+ }
+}
+
+
+@media (max-width: 1300px) {
+.class-body__img img{
+    height: 460px
+}
+}
 
 
 
